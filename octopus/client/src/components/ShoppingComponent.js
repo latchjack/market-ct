@@ -14,6 +14,24 @@ const GET_PRODUCTS = gql`
 `
 
 class ShoppingComponent extends React.Component {
+  state = {
+    amount: 0,
+    basket: 0,
+  }
+
+  handleIncrease = () => {
+    this.setState({ amount: this.state.amount + 1 })
+    console.log(this.state.amount)
+  }
+  handleDecrease = () => {
+    this.setState({ amount: this.state.amount - 1 })
+    console.log(this.state.amount)
+  }
+  handleSubmit = e => {
+    this.setState({ basket: this.state.amount })
+    console.log('the basket now contains ' + this.state.basket + ' items.')
+  }
+
   render() {
     return (
       <Query query={GET_PRODUCTS}>
@@ -34,9 +52,9 @@ class ShoppingComponent extends React.Component {
               <p>£{data.product.price}</p>
               <button>Add to cart</button>
 
-              <p>{data.product.quantity}</p>
-              <button>-</button>
-              <button>+</button>
+          <p>{this.state.amount}</p>
+              <button onClick={this.handleDecrease}>-</button>
+              <button onClick={this.handleIncrease}>+</button>
               
             </div>
           )

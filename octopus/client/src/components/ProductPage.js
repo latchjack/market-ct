@@ -42,9 +42,8 @@ class ProductPage extends React.Component {
           return (
             <div key={data.product.id}>
               <img src={data.product.imgUrl} alt={data.product.name} />
-              {data.product.name}
-              {data.product.power}
-              
+              <h1>{data.product.name}</h1>
+              <p>{data.product.power} / / Packet of {data.product.quantity}</p>
             </div>
           )
         }}
