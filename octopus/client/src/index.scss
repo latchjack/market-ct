@@ -1,5 +1,7 @@
 $blue: #0a3473;
 $blueDark: #00183c;
+$btnBlue: #215cb4;
+$btnGrey: #37374e;
 
 $offWhite: #cacfde;
 $greyMedium: #696879;
@@ -124,15 +126,30 @@ div {
 
 .price-and-counter {
   display: flex;
-  margin-bottom: 30px;
+  padding: 20px;
+}
+
+.counter {
+  font-size: 20px;
 }
 
 .counter-buttons {
   text-align: center;
   font-size: 1rem;
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 20px 25px 20px 25px;
+  border-radius: 4px;
+  border: 0px;
   color: white;
 }
 
+.increase-btn {
+  background-color: $btnBlue;
+}
+.decrease-btn {
+  background-color: $btnGrey;
+}
 .quantity-container {
   display: flex;
 }

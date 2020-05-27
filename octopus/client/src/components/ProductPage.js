@@ -90,9 +90,9 @@ class ProductPage extends React.Component {
                     <div className="price-and-counter">
                       <h1>£{data.product.price / 100}</h1>
                       <div className="quantity-container">
-                        <button onClick={this.handleDecrease}>-</button>
-                        <p>{this.state.amount}</p>
-                        <button onClick={this.handleIncrease}>+</button>
+                        <button onClick={this.handleDecrease} className="counter-buttons decrease-btn">-</button>
+                        <p className="counter">{this.state.amount}</p>
+                        <button onClick={this.handleIncrease} className="counter-buttons increase-btn">+</button>
                       </div>
                     </div>
                     <button onClick={this.handleSubmit} className="cart-button">Add to cart</button>
