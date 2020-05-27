@@ -5,7 +5,7 @@ class Header extends React.Component {
   render() {
     return (
       <div>
-        <p><span>Octopus</span> Energy</p>
+        <p><span>octopus</span>energy</p>
         <i className="fas fa-shopping-basket"></i>
       </div>
     )

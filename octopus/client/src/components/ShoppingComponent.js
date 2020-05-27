@@ -49,7 +49,7 @@ class ShoppingComponent extends React.Component {
           return (
             <div key={data.product.id}>
               
-              <p>£{parseFloat(data.product.price)}</p>
+              <p>£{data.product.price / 100}</p>
               <button onClick={this.handleSubmit}>Add to cart</button>
 
           <p>{this.state.amount}</p>
