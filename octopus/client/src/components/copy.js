@@ -68,6 +68,7 @@ class ProductPage extends React.Component {
                     <span className="company-bold-text">octopus</span>
                     <span className="company-slim-text">energy</span>
                   </p>
+                  {/* <i className="fas fa-shopping-basket fa-3x basket-icon"></i> */}
                 </div>
 
                   <div key={data.product.id} className="product-container ">
@@ -82,13 +83,11 @@ class ProductPage extends React.Component {
                     </div>
                   </div>
 
-              </div> {/*end of merging colour div*/}
 
-              <div className="page-container">
-
-                  <div  className="dark-background-colour shopping-container">
+                  <div key={data.product.id} className="dark-background-colour shopping-container">
                     <h1>£{data.product.price / 100}</h1>
-                    <button onClick={this.handleSubmit} className="cart-button">Add to cart</button>
+                    <button onClick={this.handleSubmit}>Add to cart</button>
+
                     <div className="quantity-container">
                       <button onClick={this.handleDecrease}>-</button>
                       <p>{this.state.amount}</p>
@@ -99,29 +98,26 @@ class ProductPage extends React.Component {
                   <div className="light-background-colour desc-container">
                     <h1>Description</h1>
                     <div key={data.product.id}>
-                      <p>{data.product.description}</p>
+                      {data.product.description}
                     </div>
                   </div>
+
 
                   <div className="dark-background-colour spec-container">
                     <h1>Specifications</h1>
                     <ul key={data.product.id}>
                       <li>Brand - {data.product.brand}</li>
-                      <hr />
                       <li>Item weight - {data.product.weight}</li>
                       <li>Dimensions - {data.product.height}x{data.product.width}</li>
                       <li>Item model number - {data.product.modelCode}</li>
                       <li>Colour - {data.product.colour}</li>
                     </ul>
                   </div>
+                
+              </div>
 
-
-
-
-              </div> {/*end of page-container div*/}
-
-              <div className="light-background-colour">
-                <div className="foot-container">
+              <div className="light-background-colour foot-container">
+                <div>
                   Octopus Energy Ltd is a company register in England and Wales.
                   Registered number: 09263424. Registered office: 33 Holborn, London, EC1N 2HT. Trading office: 20-24 Broadwick Street, London, W1F 8HT
                 </div>
