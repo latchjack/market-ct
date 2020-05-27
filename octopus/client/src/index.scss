@@ -14,7 +14,7 @@ $button-active-inset-start: #163e9f;
 
 body {
   font-family: 'Gotham SSm A','Gotham SSm B',helvetica,arial,sans-serif;
-  color: $offWhite;
+  color: white;
   margin: 0;
 }
 
@@ -37,5 +37,20 @@ background: linear-gradient(180deg, rgba(0,24,60,1) 68%, rgba(10,52,115,1) 68%);
 
 .product-image {
   display: flex;
-  
+}
+
+.shopping-background-colour {
+  background-color: $blueDark;
+}
+
+.desc-background-colour {
+  background-color: $blue;
+}
+
+.spec-background-colour {
+  background-color: $blueDark;
+}
+
+.footer-background-colour {
+  background-color: $blueDark;
 }

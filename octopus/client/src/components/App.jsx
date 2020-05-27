@@ -7,7 +7,7 @@ import ProductPage from './ProductPage'
 import ShoppingComponent from './ShoppingComponent'
 import DescComponent from './DescComponent'
 import SpecComponent from './SpecComponent'
-import Footer from './Footer'
+
 
 const client = new ApolloClient({ uri: 'http://localhost:8000/graphql' })
 
@@ -20,7 +20,6 @@ class App extends React.Component {
           <ShoppingComponent />
           <DescComponent />
           <SpecComponent />
-          <Footer />
         </ApolloProvider>
       </div>
     )

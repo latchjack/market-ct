@@ -28,7 +28,7 @@ class DescComponent extends React.Component {
           console.log(data)
 
           return (
-            <div>
+            <div className="desc-background-colour">
               <h1>Description</h1>
               <div key={data.product.id}>
                 {data.product.description}

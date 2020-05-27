@@ -47,12 +47,12 @@ class ShoppingComponent extends React.Component {
           // console.log(data)
 
           return (
-            <div key={data.product.id}>
+            <div key={data.product.id} className="shopping-background-colour">
               
               <p>£{data.product.price / 100}</p>
               <button onClick={this.handleSubmit}>Add to cart</button>
 
-          <p>{this.state.amount}</p>
+              <p>{this.state.amount}</p>
               <button onClick={this.handleDecrease}>-</button>
               <button onClick={this.handleIncrease}>+</button>
               
