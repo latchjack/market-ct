@@ -87,13 +87,15 @@ class ProductPage extends React.Component {
               <div className="page-container">
 
                   <div  className="dark-background-colour shopping-container">
-                    <h1>£{data.product.price / 100}</h1>
-                    <button onClick={this.handleSubmit} className="cart-button">Add to cart</button>
-                    <div className="quantity-container">
-                      <button onClick={this.handleDecrease}>-</button>
-                      <p>{this.state.amount}</p>
-                      <button onClick={this.handleIncrease}>+</button>
+                    <div className="price-and-counter">
+                      <h1>£{data.product.price / 100}</h1>
+                      <div className="quantity-container">
+                        <button onClick={this.handleDecrease}>-</button>
+                        <p>{this.state.amount}</p>
+                        <button onClick={this.handleIncrease}>+</button>
+                      </div>
                     </div>
+                    <button onClick={this.handleSubmit} className="cart-button">Add to cart</button>
                   </div>
 
                   <div className="light-background-colour desc-container">

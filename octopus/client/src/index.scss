@@ -74,7 +74,7 @@ background: linear-gradient(180deg, rgba(0,24,60,1) 63%, rgba(10,52,115,1) 63%);
 // ===COMPANY TEXT LOGO END=== //
 // ===HEADER ENDS=== //
 
-// ===PRODUCT SECTION=== //
+// ===PRODUCT SECTION STARTS=== //
 // PRODUCT IMAGE START
 .product-image {
   height: 300px;
@@ -121,6 +121,23 @@ div {
   margin-left: 7%;
   margin-right: 7%;
 }
+
+.price-and-counter {
+  display: flex;
+  margin-bottom: 30px;
+}
+
+.counter-buttons {
+  text-align: center;
+  font-size: 1rem;
+  color: white;
+}
+
+.quantity-container {
+  display: flex;
+}
+
+// ===PRODUCT SECTION ENDS=== //
 
 h1 {
   padding: 0;
