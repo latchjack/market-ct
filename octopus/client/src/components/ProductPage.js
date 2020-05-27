@@ -106,12 +106,11 @@ class ProductPage extends React.Component {
                   <div className="dark-background-colour spec-container">
                     <h1>Specifications</h1>
                     <ul key={data.product.id}>
-                      <li>Brand - {data.product.brand}</li>
-                      <hr />
-                      <li>Item weight - {data.product.weight}</li>
-                      <li>Dimensions - {data.product.height}x{data.product.width}</li>
-                      <li>Item model number - {data.product.modelCode}</li>
-                      <li>Colour - {data.product.colour}</li>
+                      <li>Brand | <span className="spec-data">{data.product.brand}</span></li>
+                      <li>Item weight | <span className="spec-data">{data.product.weight}</span></li>
+                      <li>Dimensions | <span className="spec-data">{data.product.height}x{data.product.length}x{data.product.width}</span></li>
+                      <li>Item model number | <span className="spec-data">{data.product.modelCode}</span></li>
+                      <li>Colour | <span className="spec-data">{data.product.colour}</span></li>
                     </ul>
                   </div>
 

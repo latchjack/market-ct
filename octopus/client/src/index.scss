@@ -116,15 +116,30 @@ h1 {
   margin: 10px 0 10px 0;
 }
 
+// ===LIST STYLES START=== //
+ul {
+  padding-left: 0;
+}
+
 li {
   list-style: none;
-  padding-top: 5px;
-  padding-bottom: 5px;
+  padding-top: 8px;
+  padding-bottom: 8px;
 }
 
-li:nth-of-type(1n+2) {
-  text-decoration: underline $blue;
+li:nth-of-type(1n+1) {
+  border-bottom: 1px solid $blue;
 }
 
+li:last-child {
+  border-bottom: none;
+}
 
-
+// .spec-data {
+//   // border: red 1px solid;
+//   text-indent: 10px;
+//   display: flex;
+//   flex-direction: row-reverse;
+//   justify-content: last baseline;
+// }
+// ===LIST STYLES END=== //
