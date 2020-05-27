@@ -44,13 +44,13 @@ class ShoppingComponent extends React.Component {
             return <div>Error {error.toString()}</div>
           }
 
-          console.log(data)
+          // console.log(data)
 
           return (
             <div key={data.product.id}>
               
-              <p>£{data.product.price}</p>
-              <button>Add to cart</button>
+              <p>£{parseFloat(data.product.price)}</p>
+              <button onClick={this.handleSubmit}>Add to cart</button>
 
           <p>{this.state.amount}</p>
               <button onClick={this.handleDecrease}>-</button>
