@@ -27,7 +27,6 @@ body {
 .page-container h1, .page-container button, .page-container p, .page-container ul {
   margin-left: 7%;
   margin-right: 7%;
-  // border: red 2px solid;
 }
 
 .header-container {
@@ -105,10 +104,22 @@ div {
 }
 
 .cart-button {
+  background: rgb(251,26,128);
+  background: linear-gradient(180deg, rgba(251,26,128,1) 49%, rgba(177,0,80,1) 50%);
+  font-family: 'Gotham SSm A','Gotham SSm B',helvetica,arial,sans-serif;
+  font-weight: 600;
+  letter-spacing: 2px;
+  border-radius: 4px;
+  border-color: $pinkHighlight;
   text-align: center;
   font-size: 1rem;
-  align-content: center;
-  padding: 20px;
+  color: white;
+
+  width: 86%;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  margin-left: 7%;
+  margin-right: 7%;
 }
 
 h1 {
