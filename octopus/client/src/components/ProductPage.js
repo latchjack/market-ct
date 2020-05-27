@@ -26,20 +26,20 @@ const GET_PRODUCTS = gql`
 
 class ProductPage extends React.Component {
   state = {
-    amount: 0,
+    quantity: 0,
     basket: 0,
   }
 
-  handleIncrease = () => {
-    this.setState({ amount: this.state.amount + 1 })
-    console.log(this.state.amount)
+  increaseQuantity = () => {
+    this.setState({ quantity: this.state.quantity + 1 })
+    console.log(this.state.quantity)
   }
-  handleDecrease = () => {
-    this.setState({ amount: this.state.amount - 1 })
-    console.log(this.state.amount)
+  decreaseQuantity = () => {
+    this.setState({ quantity: this.state.quantity - 1 })
+    console.log(this.state.quantity)
   }
   handleSubmit = e => {
-    this.setState({ basket: this.state.amount })
+    this.setState({ basket: this.state.quantity })
     console.log('the basket now contains ' + this.state.basket + ' items.')
   }
 
@@ -90,9 +90,9 @@ class ProductPage extends React.Component {
                     <div className="price-and-counter">
                       <h1>£{data.product.price / 100}</h1>
                       <div className="quantity-container">
-                        <button onClick={this.handleDecrease} className="counter-buttons decrease-btn">-</button>
-                        <p className="counter">{this.state.amount}</p>
-                        <button onClick={this.handleIncrease} className="counter-buttons increase-btn">+</button>
+                        <button onClick={this.decreaseQuantity} className="counter-buttons decrease-btn">-</button>
+                        <p className="counter">{this.state.quantity}</p>
+                        <button onClick={this.increaseQuantity} className="counter-buttons increase-btn">+</button>
                       </div>
                     </div>
                     <button onClick={this.handleSubmit} className="cart-button">Add to cart</button>

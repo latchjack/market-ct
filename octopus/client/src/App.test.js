@@ -1,6 +1,6 @@
 import React from 'react';
 import { render, fireEvent, waitForElement } from '@testing-library/react'
-import App from './App';
+import App from './components/App';
 
 test('should be able to increase and decrease product quantity', async () => {
   const { getByText, getByTitle } = render(<App />);
