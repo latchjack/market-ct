@@ -2,7 +2,7 @@ import React from 'react';
 import ApolloClient from 'apollo-boost'
 import { ApolloProvider } from 'react-apollo'
 
-import Header from './Header'
+
 import ProductPage from './ProductPage'
 import ShoppingComponent from './ShoppingComponent'
 import DescComponent from './DescComponent'
@@ -16,7 +16,6 @@ class App extends React.Component {
     return (
       <div className="App">
         <ApolloProvider client={client}>
-          <Header />
           <ProductPage />
           <ShoppingComponent />
           <DescComponent />

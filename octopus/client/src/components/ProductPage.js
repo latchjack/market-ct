@@ -40,10 +40,16 @@ class ProductPage extends React.Component {
           console.log(data)
 
           return (
-            <div key={data.product.id}>
-              <img src={data.product.imgUrl} alt={data.product.name} />
+            <div className="product-background-colour">
+            <div>
+              <p className="company-text-logo"><span className="company-bold-text">octopus</span><span className="company-slim-text">energy</span></p>
+              <i className="fas fa-shopping-basket fa-3x"></i>
+            </div>
+            <div key={data.product.id} className="product-background-colour">
+              <img src={data.product.imgUrl} alt={data.product.name} className="product-image" />
               <h1>{data.product.name}</h1>
               <p>{data.product.power} / / Packet of {data.product.quantity}</p>
+            </div>
             </div>
           )
         }}

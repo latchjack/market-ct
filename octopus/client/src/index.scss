@@ -1,4 +1,41 @@
+$blue: #0a3473;
+$blueDark: #00183c;
+
+$offWhite: #cacfde;
+$greyMedium: #696879;
+
+$purple: #180A38;
+$pink: #fb1a80;
+$pinkDark: #b10050;
+$pinkHighlight: #ed0077;
+
+$button-active-end: #003392;
+$button-active-inset-start: #163e9f;
+
 body {
   font-family: 'Gotham SSm A','Gotham SSm B',helvetica,arial,sans-serif;
+  color: $offWhite;
   margin: 0;
+}
+
+.company-text-logo {
+  font-size: 2rem;
+}
+
+.company-bold-text {
+  font-weight: 500;
+}
+
+.company-slim-text {
+  font-weight: 300;
+}
+
+.product-background-colour {
+  background: rgb(0,24,60);
+background: linear-gradient(180deg, rgba(0,24,60,1) 68%, rgba(10,52,115,1) 68%);
+}
+
+.product-image {
+  display: flex;
+  
 }
