@@ -26,20 +26,20 @@ const GET_PRODUCTS = gql`
 
 class ProductPage extends React.Component {
   state = {
-    quantity: 0,
+    currentQuantity: 1,
     basket: 0,
   }
 
   increaseQuantity = () => {
-    this.setState({ quantity: this.state.quantity + 1 })
-    console.log(this.state.quantity)
+    this.setState({ currentQuantity: this.state.currentQuantity + 1 })
+    console.log(this.state.currentQuantity)
   }
   decreaseQuantity = () => {
-    this.setState({ quantity: this.state.quantity - 1 })
-    console.log(this.state.quantity)
+    this.setState({ currentQuantity: this.state.currentQuantity - 1 })
+    console.log(this.state.currentQuantity)
   }
   handleSubmit = e => {
-    this.setState({ basket: this.state.quantity })
+    this.setState({ basket: this.state.currentQuantity })
     console.log('the basket now contains ' + this.state.basket + ' items.')
   }
 
@@ -91,7 +91,7 @@ class ProductPage extends React.Component {
                       <h1>£{data.product.price / 100}</h1>
                       <div className="quantity-container">
                         <button onClick={this.decreaseQuantity} className="counter-buttons decrease-btn">-</button>
-                        <p className="counter">{this.state.quantity}</p>
+                        <p className="counter">{this.state.currentQuantity}</p>
                         <button onClick={this.increaseQuantity} className="counter-buttons increase-btn">+</button>
                       </div>
                     </div>
