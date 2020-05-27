@@ -63,32 +63,34 @@ class ProductPage extends React.Component {
 
               <div className="product-background-colour">
 
-                <div>
+                <div className="header-container">
                   <p className="company-text-logo">
                     <span className="company-bold-text">octopus</span>
                     <span className="company-slim-text">energy</span>
                   </p>
-                  <i className="fas fa-shopping-basket fa-3x"></i>
+                  <i className="fas fa-shopping-basket fa-3x basket-icon"></i>
                 </div>
 
-                <div key={data.product.id} className="product-background-colour">
-                  <img src={data.product.imgUrl} alt={data.product.name} className="product-image" />
+                <div key={data.product.id} className="product-container">
+                  <img src={data.product.imgUrl} alt={data.product.name} className="product-image image is-128x128" />
                   <h1>{data.product.name}</h1>
-                  <p>{data.product.power} / / Packet of {data.product.quantity}</p>
+                  <p className="product-info">{data.product.power} / / Packet of {data.product.quantity}</p>
                 </div>
 
               </div>
 
-              <div key={data.product.id} className="shopping-background-colour">
+              <div key={data.product.id} className="shopping-background-colour shopping-container">
                 <h1>£{data.product.price / 100}</h1>
                 <button onClick={this.handleSubmit}>Add to cart</button>
 
-                <p>{this.state.amount}</p>
-                <button onClick={this.handleDecrease}>-</button>
-                <button onClick={this.handleIncrease}>+</button>
+                <div className="quantity-container">
+                  <button onClick={this.handleDecrease}>-</button>
+                  <p>{this.state.amount}</p>
+                  <button onClick={this.handleIncrease}>+</button>
+                </div>
               </div>
 
-              <div className="desc-background-colour">
+              <div className="desc-background-colour desc-container">
                 <h1>Description</h1>
                 <div key={data.product.id}>
                   {data.product.description}
@@ -96,7 +98,7 @@ class ProductPage extends React.Component {
               </div>
 
 
-              <div className="spec-background-colour">
+              <div className="spec-background-colour spec-container">
                 <h1>Specifications</h1>
                 <ul key={data.product.id}>
                   <li>Brand - {data.product.brand}</li>
@@ -107,7 +109,7 @@ class ProductPage extends React.Component {
                 </ul>
               </div>
 
-              <div className="footer-background-colour">
+              <div className="footer-background-colour foot-container">
                 <div>
                   Octopus Energy Ltd is a company register in England and Wales.
                   Registered number: 09263424. Registered office: 33 Holborn, London, EC1N 2HT. Trading office: 20-24 Broadwick Street, London, W1F 8HT
