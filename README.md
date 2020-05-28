@@ -1,97 +1,53 @@
-<!-- # Octopus Front End Test -->
+# Product-page-test
 
-This example project was pinched from a
-[graphene-django example app](https://github.com/graphql-python/graphene-django/tree/master/server/app).
-and [Create React App](https://create-react-app.dev/docs/getting-started/).  
-The project contains two apps - a django app named `products` and a react app
-named `shop`.
-
-In this code test, you'll be asked to:
-
--   Make a simple React app that follows the design in AppDesignMobile.png, consumes the API and
-    makes the front end tests pass. Ideally the app should be responsive.
-
-We've included a sample create react app project for your convenience, but you're welcome to swap
-it out for another framework if you prefer. You're also welcome to write more tests for other
-parts of the application - but design those however you like.
-
-## Getting started
-
-We assume you have access to a unix environment - if this poses a real problem please let us know.
-
-First you'll need to install your dependencies
-
-```bash
-# Navigate into the django project
-cd octopus/server
-```
-
-It is good idea (but not required) to create a virtual environment
-for this project. We'll do this using
-[virtualenv](http://docs.python-guide.org/en/latest/dev/virtualenvs/)
-to keep things simple.
-
-```bash
-# Create a virtualenv in which we can install the dependencies
-virtualenv env
-source env/bin/activate
-```
-
-Now we can install our dependencies:
-
-```bash
-pip install -r requirements.txt
-```
-
-To add some data to your database do the following:
-
-```bash
-./manage.py migrate
-# Load some example data
-./manage.py loaddata products
-```
-
-Now you should be ready to start the server:
-
-```bash
-./manage.py runserver 8000
-```
-
-<!-- Here is the [query to run to get you started](http://127.0.0.1:8000/graphql#operationName=getProductById&query=query%20getProductById%20%7B%0A%20%20product(productId%3A%201)%20%7B%0A%20%20%20%20id%0A%20%20%20%20name%0A%20%20%20%20power%0A%20%20%20%20description%0A%20%20%20%20price%0A%20%20%20%20quantity%0A%20%20%20%20brand%0A%20%20%20%20weight%0A%20%20%20%20height%0A%20%20%20%20width%0A%20%20%20%20length%0A%20%20%20%20modelCode%0A%20%20%20%20colour%0A%20%20%20%20imgUrl%0A%20%20%7D%0A%7D%0A) -->
+## Tech Stack
++ HTML5
++ SCSS & Bulma
++ JavaScript (ES6)
++ React
+  + React-apollo
++ GraphQL
++ Apollo-boost
++ Git & GitHub
 
 
-Once you have your server running, you're ready to install the front end dependencies
+## Getting Started
+If you would like to start this project in the Terminal, CD into the `client` directory. Once there, `yarn` to install dependencies. Then `yarn start` to get the project running. You can then navigate to `http://localhost:3000` to view the project.
 
-```bash
-# Navigate into the react app
-cd octopus/client
+## Release History
++ 1.0
 
-# install dependencies
-yarn
 
-# start the server
-yarn start
-```
+## Screenshots
 
-You should be able to see the Hello World message.
+#### Requested design
 
-## Running the tests
+![Screenshot of the requested design](readmefiles/AppDesignMobile.png)
 
-You can run the front end tests by navigating to the directory
+#### My version
+![Screenshot of the app](readmefiles/FullScreenshot.png)
 
-```bash
-cd octopus/client
-yarn test
-```
 
-Press `a` to run all the tests. This should give you two failures:
+## Challenges and Improvements
 
-```bash
- FAIL  src/App.test.js
-  ✕ should be able to increase and decrease product quantity
-  ✕ should be able to add items to the basket
-```
+### Challenges
+The main challenges I had on this project were...
+1. Getting 
+2. Getting the test to register that it was able to add items to the basket. You're able to add the bulb to the basket and it is stored in state but the test doesn't seem to pass.
+3. Getting the correct colours. I got the official colour scheme from the Octopus Styleguide online but they didn't match correctly with the AppDesign image.
 
-So the task is to make a client that passes these tests :)
 
-Best of luck!
+### Improvements
+The improvements I would like to make on this page would be the following...
+1. Getting the number on the basket to hide if the basket is empty.
+2. Improving the responsiveness of the image and a few elements on the page. I designed it mobile-first but found it challenging to get it to look as nice for the desktop.
+3. Making the page more compliant with the WCAG.
+4. Getting a better understanding of Jest and getting the tests to pass.
+
+## Wins
+I really enjoyed this challenge. I had no prior experience with GraphQL so it was a great opportunity to learn how to use it. I was able to use GraphQL to request the data from the backend and get it to display on the page. I was happy (but not completely satisfied) with how the styling went, I was able to get it to look very similar to the AppDesignMobile image. I was really happy that I learnt how to use GraphQL as I have wanted to try it for some time, and now after using it I want to use on future projects too.
+
+#### Author
+Latch Jack - You can contact me via [Twitter](https://twitter.com/LatchCodes "My twitter profile") or via [email](mailto:latch.jack@gmail.com "my email").
+
+Thank you for reading my repository! :)
