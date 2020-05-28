@@ -35,15 +35,15 @@ class ProductPage extends React.Component {
 
   increaseQuantity = () => {
     this.setState({ currentQuantity: this.state.currentQuantity + 1 })
-    console.log(this.state.currentQuantity)
+    // console.log(this.state.currentQuantity)
   }
   decreaseQuantity = () => {
     this.setState({ currentQuantity: this.state.currentQuantity - 1 })
-    console.log(this.state.currentQuantity)
+    // console.log(this.state.currentQuantity)
   }
   handleSubmit = e => {
     this.setState({ basket: this.state.basket + this.state.currentQuantity })
-    console.log('the basket now contains ' + this.state.basket.value + ' items.')
+    // console.log('the basket now contains ' + this.state.basket.value + ' items.')
   }
 
 
@@ -59,7 +59,7 @@ class ProductPage extends React.Component {
             return <div>Error {error.toString()}</div>
           }
 
-          console.log(data)
+          // console.log(data)
 
           return (
             <div className="whole-page column is-full-desktop is-one-third-tablet is-full-mobile">
