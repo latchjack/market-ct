@@ -1,5 +1,8 @@
 import React from 'react';
 
+import ImgBasket from '../assets/basket.svg'
+import ImgLogo from '../assets/logo.svg'
+
 import { gql } from 'apollo-boost'
 import { Query } from 'react-apollo'
 
@@ -40,7 +43,7 @@ class ProductPage extends React.Component {
   }
   handleSubmit = e => {
     this.setState({ basket: this.state.basket + this.state.currentQuantity })
-    console.log('the basket now contains ' + this.state.basket + ' items.')
+    console.log('the basket now contains ' + this.state.basket.value + ' items.')
   }
 
 
@@ -65,10 +68,13 @@ class ProductPage extends React.Component {
 
                 <div className="header-container">
                   <p className="company-text-logo">
-                    <span className="company-bold-text">octopus</span>
-                    <span className="company-slim-text">energy</span>
+                    <img src={ImgLogo} alt="octopus text logo" width="200px" />
+                    {/* <span className="company-bold-text">octopus</span> */}
+                    {/* <span className="company-slim-text">energy</span> */}
                   </p>
                   <p>{this.state.basket}</p>
+                  <img src={ImgBasket} alt="shopping basket" height="50px"/>
+                  
                 </div>
 
                   <div key={data.product.id} className="product-container ">
