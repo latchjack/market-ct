@@ -39,7 +39,7 @@ class ProductPage extends React.Component {
     console.log(this.state.currentQuantity)
   }
   handleSubmit = e => {
-    this.setState({ basket: this.state.currentQuantity })
+    this.setState({ basket: this.state.basket + this.state.currentQuantity })
     console.log('the basket now contains ' + this.state.basket + ' items.')
   }
 
@@ -68,6 +68,7 @@ class ProductPage extends React.Component {
                     <span className="company-bold-text">octopus</span>
                     <span className="company-slim-text">energy</span>
                   </p>
+                  <p>{this.state.basket}</p>
                 </div>
 
                   <div key={data.product.id} className="product-container ">
