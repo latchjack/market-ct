@@ -36,7 +36,24 @@ body {
   padding-left: 2%;
   margin: 0;
   padding-top: 1px;
+  display: flex;
 }
+
+.basketArea {
+  // border: red 1px solid;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+
+.innerBasketArea {
+  // border: green 1px solid;
+  display: flex;
+  align-self: center;
+}
+
+.basketNumber {}
 
 .product-container, .desc-container, .shopping-container, .spec-container, .foot-container {
   padding-top: 15px;

@@ -72,9 +72,12 @@ class ProductPage extends React.Component {
                     {/* <span className="company-bold-text">octopus</span> */}
                     {/* <span className="company-slim-text">energy</span> */}
                   </p>
-                  <p>{this.state.basket}</p>
-                  <img src={ImgBasket} alt="shopping basket" height="50px"/>
-                  
+                  <div className="basketArea">
+                    <div className="innerBasketArea">
+                      <p className="basketNumber">{this.state.basket}</p>
+                      <img src={ImgBasket} alt="shopping basket" height="50px"/>
+                    </div>
+                  </div>
                 </div>
 
                   <div key={data.product.id} className="product-container ">
